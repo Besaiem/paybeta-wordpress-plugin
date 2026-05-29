@@ -1,0 +1,45 @@
+{
+  "$schema": "https://unpkg.com/release-it/schema/release-it.json",
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat",     "section": "Features" },
+          { "type": "fix",      "section": "Bug Fixes" },
+          { "type": "perf",     "section": "Performance Improvements" },
+          { "type": "revert",   "section": "Reverts" },
+          { "type": "docs",     "section": "Documentation" },
+          { "type": "refactor", "section": "Code Refactoring", "hidden": true },
+          { "type": "test",     "hidden": true },
+          { "type": "chore",    "hidden": true },
+          { "type": "ci",       "hidden": true }
+        ]
+      },
+      "infile": "CHANGELOG.md",
+      "header": "# Changelog\n\nAll notable changes to the Paybeta WooCommerce Payment Gateway will be documented here.\n\nThe format follows [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/).\n"
+    }
+  },
+  "hooks": {
+    "after:bump": "node scripts/bump-php-version.mjs ${version}"
+  },
+  "git": {
+    "requireBranch": "main",
+    "requireCleanWorkingDir": true,
+    "commitMessage": "chore(release): paybeta-payment-gateway v${version}",
+    "tagName": "wp-v${version}",
+    "tagAnnotation": "Paybeta WooCommerce Gateway v${version}"
+  },
+  "github": {
+    "release": false
+  },
+  "npm": {
+    "publish": false
+  },
+  "ci": {
+    "git": {
+      "requireBranch": false,
+      "requireCleanWorkingDir": false
+    }
+  }
+}

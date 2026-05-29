@@ -1,0 +1,14 @@
+{
+  "name": "paybeta-payment-gateway",
+  "version": "1.0.0",
+  "description": "Tooling for Paybeta WooCommerce Payment Gateway plugin releases",
+  "private": true,
+  "scripts": {
+    "release":     "release-it",
+    "release:dry": "release-it --dry-run"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.0",
+    "release-it": "^17.0.0"
+  }
+}
