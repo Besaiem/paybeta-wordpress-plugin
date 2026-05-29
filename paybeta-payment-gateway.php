@@ -3,7 +3,7 @@
  * Plugin Name:       Paybeta Payment Gateway
  * Plugin URI:        https://paybeta.com
  * Description:       Accept payments via Paybeta in your WooCommerce store. Supports cards, bank transfers, and USSD with built-in escrow protection.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Paybeta
  * Author URI:        https://paybeta.com
  * License:           GPL-2.0-or-later
@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PAYBETA_VERSION',    '1.0.0' );
+define( 'PAYBETA_VERSION',    '1.0.1' );
 define( 'PAYBETA_PLUGIN_FILE', __FILE__ );
 define( 'PAYBETA_PLUGIN_DIR',  plugin_dir_path( __FILE__ ) );
 
